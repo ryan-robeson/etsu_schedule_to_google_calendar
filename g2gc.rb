@@ -113,12 +113,12 @@ class Event
     {
       'summary' => summary,
       'start' => {
-        'datetime' => start_datetime,
-        'timeZone' => start_datetime.strftime('%z')
+        'dateTime' => start_datetime,
+        'timeZone' => 'America/New_York'
       },
       'end' => {
-        'datetime' => end_datetime,
-        'timeZone' => end_datetime.strftime('%z')
+        'dateTime' => end_datetime,
+        'timeZone' => 'America/New_York'
       },
       'description' => description,
       'recurrence' => recurrence
@@ -168,10 +168,12 @@ end
 
 service = client.discovered_api('calendar', 'v3')
 
+
 events.each do |event|
   result = client.execute(:api_method => service.events.insert,
-                          :parameters => {'calendarId' => '{primary}'},
+                          :parameters => {'calendarId' => 'ftket4nt6b6h279jr00835vd50@group.calendar.google.com'},
                           :body => event.to_json,
                           :headers => {'Content-Type' => 'application/json'})
-  p result.data
 end
+
+puts "Done."

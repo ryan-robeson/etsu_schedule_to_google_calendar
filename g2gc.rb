@@ -130,7 +130,7 @@ doc = Nokogiri::HTML(ARGF.read)
 
 rows = doc.css(".datadisplaytable")[1].css("tr")[1..5]
 
-schedule = []
+events = []
 
 rows.each do |r|
   r = r.text.split("\n")
@@ -145,13 +145,7 @@ rows.each do |r|
   c.room = r[10]
   c.teacher = r[11]
   
-  schedule << c
-end
-
-events = []
-
-schedule.each do |s|
- events << Event.new(s)
+  events << Event.new(c)
 end
 
 oauth_yaml = YAML.load_file('.google-api.yaml')
@@ -167,7 +161,6 @@ if client.authorization.refresh_token && client.authorization.expired?
 end
 
 service = client.discovered_api('calendar', 'v3')
-
 
 events.each do |event|
   result = client.execute(:api_method => service.events.insert,

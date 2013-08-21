@@ -67,7 +67,7 @@ class Event
   end
 
   def summary
-    "#{@ec.start_time} - #{@ec.name}"
+    "#{@ec.room} - #{@ec.name}"
   end
 
   def start_datetime

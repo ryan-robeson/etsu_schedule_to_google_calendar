@@ -16,7 +16,7 @@ USAGE
 
 Editing g2gc.rb
 ---------------
-g2gc.rb is hardcoded to find 5 classes. If you have a different number of classes you must change the row array to accomodate this. It is also hardcoded to the calendar id. You must insert your calendar id for the calendar you wish to add your classes to. According to the google api docs you may be able to use {primary}. An option to find your calendar id may be added if there is any interest in this project.
+g2gc.rb is hardcoded to the calendar id. You must insert your calendar id for the calendar you wish to add your classes to. According to the google api docs you may be able to use {primary}. An option to find your calendar id may be added if there is any interest in this project.
 
 Why write this?
 ---------------

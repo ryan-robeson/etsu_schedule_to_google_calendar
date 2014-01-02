@@ -128,7 +128,7 @@ end
 
 doc = Nokogiri::HTML(ARGF.read)
 
-rows = doc.css(".datadisplaytable")[1].css("tr")[1..5]
+rows = doc.css(".datadisplaytable")[1].css("tr")[1..-2]
 
 events = []
 

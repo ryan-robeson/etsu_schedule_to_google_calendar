@@ -20,4 +20,4 @@ g2gc.rb is hardcoded to the calendar id. You must insert your calendar id for th
 
 Why write this?
 ---------------
-I wanted a quick project to practice my programmings skills and to see if I was capable of developing a script to go from a table of data in one format to events on Google Calendar that required a much different format for creation. Moslty I was just too lazy to type my classes in this semester and wanted to make my computer work for me.
+I wanted a quick project to practice my programming skills and to see if I was capable of developing a script to go from a table of data in one format to events on Google Calendar that required a much different format for creation. Mostly I was just too lazy to type my classes in this semester and wanted to make my computer work for me.

@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'nokogiri'
 require 'json'
 require 'google/api_client'
+require 'yaml'
 
 class ETSUClass
   attr_accessor :number, :name, :start_date, :end_date, :days, :time, :room, :teacher
@@ -136,14 +137,14 @@ rows.each do |r|
   r = r.text.split("\n")
 
   c = ETSUClass.new
-  c.number = r[1]
-  c.name = r[2]
-  c.start_date = r[6]
-  c.end_date = r[7]
-  c.days = r[8]
-  c.time = r[9]
-  c.room = r[10]
-  c.teacher = r[11]
+  c.number = r[2]
+  c.name = r[3]
+  c.start_date = r[7]
+  c.end_date = r[8]
+  c.days = r[9]
+  c.time = r[10]
+  c.room = r[11]
+  c.teacher = r[12]
   
   events << Event.new(c)
 end
